@@ -4,6 +4,10 @@
 	background-image: linear-gradient(60deg, var(--upper-header-background, $upperHeaderBackground) 0%, var(--upper-header-background-blend, $upperHeaderBackgroundBlend) 120%);
 }
 
+.personal-bar-container {
+	margin-right: 10px;
+}
+
 .lower-header-bg {
 	@include frontend-token(background-color, --lower-header-background, $lowerHeaderBackground);
 

@@ -11,14 +11,18 @@
 @import 'portlet/portlet_decorators';
 @import 'portlet/portlet_hello_world';
 
+@import "./minium/minium";
 @import "vendor/creative/mixins";
 @import "vendor/creative/variables";
 @import "vendor/creative/masthead";
 @import "vendor/creative/services";
 @import "vendor/creative/portfolio";
 
+
+
 @import "vendor/fontawesome-free/css/all.css";
 @import 'custom_properties';
+
 
 body {
     @include sans-serif-font;
@@ -120,4 +124,25 @@ hr {
 	max-width: 50px;
 	border-width: 3px;
 	border-color: $primary;
+}
+
+.columns-2 {
+	margin-top: 10px;
+}
+
+//Dirty Minium fixes
+
+//this one does the products available string in the catalogue search results
+
+#portlet_com_liferay_commerce_product_content_search_web_internal_portlet_CPSortPortlet > div > div > div > div > div > p {
+	font-style: italic;
+	font-size: 0.9em;
+}
+
+.account-management__email {
+	display: none;
+}
+
+.account-management__name {
+	margin-top: 7%;
 }

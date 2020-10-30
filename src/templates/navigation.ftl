@@ -5,5 +5,15 @@
 
 	<div aria-expanded="false" class="collapse flex-grow-0 navbar-collapse" id="navigationCollapse">
 		<@liferay.navigation_menu default_preferences="${preferences}" />
+		<#if show_account_selector>
+			<div class="minium-topbar__account-selector-wrapper">
+				<@liferay_commerce_ui["account-selector"] />
+			</div>
+		</#if>	
 	</div>
+	<#if show_mini_cart>
+		<div class="minium-topbar__cart-wrapper">
+					<@liferay_commerce_ui["mini-cart"] spritemap="${themeDisplay.getPathThemeImages()}/icons.svg" />
+		</div>
+	</#if>
 </#if>

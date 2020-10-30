@@ -6,6 +6,7 @@
 
 <head>
 	<title>${html_title}</title>
+	<script type="text/javascript" src="${javascript_folder}/intersection-observer.js"></script>
 
 	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
 
@@ -39,26 +40,25 @@
 									/>
 								</div>
 							</#if>
-
+							
 							<#assign preferences = freeMarkerPortletPreferences.getPreferences({"portletSetupPortletDecoratorId": "barebone", "destination": "/search"}) />
 
-							<div class="autofit-col flex-grow-1 flex-shrink-1">
-								<#if show_header_search>
+							<div class="autofit-col flex-grow-1 flex-shrink-1">								
 									<div class="justify-content-md-end ml-md-2 mr-2 mr-md-4 navbar-form" role="search">
+										<div class="autofit-col personal-bar-container">
+											<#if !is_signed_in>					
+												<a style="margin-right: 10px" class="sign-in text-default" data-redirect="${is_login_redirect_required?string}" href="javascript:void(0)" onclick="$('#loginCardContainer').css('visibility', 'visible');" id="sign-in" rel="nofollow">${sign_in_text}</a>
+											</#if>
+											
+											<#if is_signed_in>
+												<@liferay.user_personal_bar />	
+											</#if>											
+										</div>
+									<#if show_header_search>
 										<@liferay.search_bar default_preferences="${preferences}" />
+									</#if>
 									</div>
-								</#if>
-							</div>
-
-							<div class="autofit-col personal-bar-container">
-								<#if !is_signed_in>					
-									<a class="sign-in text-default" data-redirect="${is_login_redirect_required?string}" href="javascript:void(0)" onclick="$('#loginCardContainer').css('visibility', 'visible');" id="sign-in" rel="nofollow">${sign_in_text}</a>
-								</#if>
-								
-								<#if is_signed_in>
-									<@liferay.user_personal_bar />	
-								</#if>
-							</div>
+							</div>													
 						</div>
 					</div>
 				</div>
@@ -87,7 +87,7 @@
 			</header>
 		</#if>
 
-		<section class="${portal_content_css_class} flex-fill" id="content">
+		<section class="${portal_content_css_class} minium-frame flex-fill" id="content">
 			<h2 class="sr-only" role="heading" aria-level="1">${the_title}</h2>
 
 			<#if selectable>

@@ -3,7 +3,7 @@
   <compatibility>
     <version>7.3.0+</version>
   </compatibility>
-  <theme id="73-formed-theme" name="73 Formed Theme">
+  <theme id="73-creative-formed-theme" name="73 Creative Formed Theme">
     <template-extension>ftl</template-extension>
     <settings>
 		<setting configurable="false" key="color-palette" value="primary,success,danger,warning,info,dark,gray-dark,secondary,light,lighter,white"/>
@@ -14,9 +14,10 @@
 		<setting configurable="false" key="show-site-name-default" value="true"/>
 		<setting configurable="false" key="show-site-name-supported" value="true"/>
 		<setting configurable="true" key="wrap-widget-page-content" type="checkbox" value="true"/>
-
 		<setting configurable="true" key="enable-sticky-header" type="checkbox" value="true" />
 		<setting configurable="true" key="show-language-selector" type="checkbox" value="true" />
+		<setting configurable="true" key="show-account-selector" type="checkbox" value="true"/>
+		<setting configurable="true" key="show-mini-cart" type="checkbox" value="true"/>
     </settings>
     <roles>
       <role-name>User</role-name>
