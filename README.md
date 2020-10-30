@@ -11,8 +11,9 @@ The Minium B2B demo theme has also been imported to this theme and modified. Tha
 ### Set Up
 
 1. `npm install`
-2. `npm run init`
-3. `npm run deploy`
+2. `gulp build`
+3. `Deploy it your Liferay instance and cross your fingers`
+4. `Modify it to your satisfaction`
 
 Thanks to Evan from Liferay and his fabulous work.
 
