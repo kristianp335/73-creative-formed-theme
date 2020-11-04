@@ -57,7 +57,9 @@
 		flex-grow: 0;
 		font-size: 14px;
 		height: 70px;
-		padding: 20px 0 20px 20px;
+		border: none;
+		background-color: $color-bg;
+		
 
 		&:hover {
 			color: $color-fg-alt;

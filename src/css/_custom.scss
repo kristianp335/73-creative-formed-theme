@@ -126,13 +126,13 @@ hr {
 	border-color: $primary;
 }
 
-.columns-2 {
-	margin-top: 10px;
-}
-
 //Dirty Minium fixes
 
 //this one does the products available string in the catalogue search results
+
+.columns-2 {
+	margin-top: 10px;
+}
 
 #portlet_com_liferay_commerce_product_content_search_web_internal_portlet_CPSortPortlet > div > div > div > div > div > p {
 	font-style: italic;

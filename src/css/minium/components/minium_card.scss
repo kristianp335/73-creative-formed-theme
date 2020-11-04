@@ -137,7 +137,6 @@ $card-spacer: 20px;
 		font-size: 12px;
 		line-height: 1;
 		margin-bottom: 8px;
-		margin-top: 24px;
 		min-height: 12px;
 	}
 
@@ -170,8 +169,8 @@ $card-spacer: 20px;
 
 	&__description {
 		flex: 1;
-		line-height: 28px;
-		margin: 0;
+		font-size: 0.8em;
+		margin: 8px;
 	}
 
 	&__price {
@@ -273,4 +272,16 @@ $card-spacer: 20px;
 		position: absolute;
 		z-index: 1;
 	}
+}
+
+// card drop shadow specific to creative
+
+.minium-product-tiles__item {
+	box-shadow: 2px 2px 4px $color-shadow-creative;
+}
+
+// specific to creative removes the box shadow on the product detail page
+
+.card.main-image {
+	box-shadow: none !important;
 }
