@@ -15,7 +15,7 @@
 
 <#--  Formed Theme  -->
 
-
+<#-- switch to this if you don't want to hide the control panel - <#assign show_dockbar = is_signed_in /> -->
 
 <#assign show_dockbar = permissionChecker.isOmniadmin() || permissionChecker.isGroupAdmin(user_id)/>
 
