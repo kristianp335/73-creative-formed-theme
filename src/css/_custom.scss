@@ -150,3 +150,16 @@ hr {
 .ddm-form-description {
 	margin-bottom: 10px;
 }
+
+//FAQ Styles
+
+.drop-question {
+	padding: 10px;
+	border: $brand-primary 1px solid;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.drop-answer {
+	padding: 10px;
+}
