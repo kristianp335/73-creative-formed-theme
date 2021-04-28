@@ -1,0 +1,49 @@
+.upper-header-bg {
+	@include frontend-token(background-color, --upper-header-background, $upperHeaderBackground);
+
+	background-image: linear-gradient(60deg, var(--upper-header-background, $upperHeaderBackground) 0%, var(--upper-header-background-blend, $upperHeaderBackgroundBlend) 120%);
+}
+
+.personal-bar-container {
+	margin-right: 10px;
+}
+
+.lower-header-bg {
+	@include frontend-token(background-color, --lower-header-background, $lowerHeaderBackground);
+
+	background-image: linear-gradient(60deg, var(--lower-header-background, $lowerHeaderBackground) 0%, var(--lower-header-background-blend, $lowerHeaderBackgroundBlend) 120%);
+}
+
+.lower-header-text-color,
+.lower-header .portlet-navigation .navbar-nav .nav-item .nav-link {
+	@include frontend-token(color, --lower-header-text-color, $lowerHeaderTextColor);
+}
+
+.upper-header-text-color,
+.personal-bar-container .sign-in {
+	@include frontend-token(color, --upper-header-text-color, $upperHeaderTextColor);
+}
+
+.lower-header {
+	& > .container-fluid {
+		@include frontend-token(flex-direction, --lower-header-flex-direction, $lowerHeaderFlexDirection);
+	}
+
+	.logo-md {
+		@include frontend-token(flex-direction, --lower-header-flex-direction, $lowerHeaderFlexDirection);
+	}
+}
+
+.site-logo {
+	@include frontend-token(height, --site-logo-height, $siteLogoHeight);
+	@include frontend-token(width, --site-logo-width, $siteLogoWidth);
+}
+
+// Fix horizontal scroll due to portlet topper overflowing with small navigation width.
+
+@media (min-width: 576px) {
+	.lower-header .portlet > .portlet-topper {
+		left: auto;
+		right: 0;
+	}
+}

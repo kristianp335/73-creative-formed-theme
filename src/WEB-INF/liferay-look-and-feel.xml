@@ -3,7 +3,7 @@
   <compatibility>
     <version>7.3.0+</version>
   </compatibility>
-  <theme id="73-creative-formed-theme" name="73 Creative Formed Theme">
+  <theme id="73-creative-robotics" name="73 Creative Robotics Theme">
     <template-extension>ftl</template-extension>
     <settings>
 		<setting configurable="false" key="color-palette" value="primary,success,danger,warning,info,dark,gray-dark,secondary,light,lighter,white"/>

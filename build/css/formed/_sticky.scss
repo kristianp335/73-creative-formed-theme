@@ -1,0 +1,10 @@
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+    z-index: $zindex-sticky;
+}
+
+.product-menu-open .sticky {
+	width: calc(100% - $sidenav-width);
+}

@@ -1,0 +1,165 @@
+@import 'components/breadcrumb';
+@import 'components/color';
+@import 'components/group-item';
+@import 'components/info-panel';
+@import 'components/navbars';
+@import 'components/sidebar';
+@import 'components/splitter';
+@import 'components/table';
+@import 'components/widget';
+@import 'portlet/portlet';
+@import 'portlet/portlet_decorators';
+@import 'portlet/portlet_hello_world';
+
+@import "./minium/minium";
+@import "vendor/creative/mixins";
+@import "vendor/creative/variables";
+@import "vendor/creative/masthead";
+@import "vendor/creative/services";
+@import "vendor/creative/portfolio";
+
+
+
+@import "vendor/fontawesome-free/css/all.css";
+@import 'custom_properties';
+
+
+body {
+    @include sans-serif-font;
+}
+
+#wrapper {
+    @include serif-font;
+}	
+
+body {
+	header {
+		.field-wrapper {
+			position: absolute;
+			right: 4px;
+			top: 2px;
+
+			a {
+				color: #fff;
+			}
+		}
+
+		.field-wrapper,
+		.form-group {
+			margin-bottom: 0;
+		}
+
+		.portlet {
+			margin-bottom: 0;
+
+			&:hover {
+				z-index: 1034;
+			}
+		}
+
+		.search-input {
+			font-size: 0.88rem;
+			padding: 0.28rem 2rem 0.28rem 1rem;
+		}
+
+		.text-default {
+			font-weight: 600;
+		}
+
+		.user-personal-bar {
+			.fieldset {
+				position: relative;
+			}
+
+			.user-avatar-link .panel-notifications-count {
+				right: calc(100% - 0.75rem);
+				top: -0.35rem;
+			}
+		}
+	}
+
+	.user-avatar-link {
+		display: block;
+		position: relative;
+
+		.panel-notifications-count {
+			display: block;
+			margin: 0;
+			max-width: none;
+			position: absolute;
+			right: calc(100% - 0.7rem);
+			top: -0.4rem;
+		}
+
+		.text-default {
+			align-items: center;
+			display: flex;
+
+			.user-full-name {
+				margin-left: 0.5rem;
+
+				@include media-breakpoint-down(xs) {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+.btn-group + .info-panel {
+	@include media-breakpoint-up(sm) {
+		top: auto;
+	}
+}
+
+#footer {
+	
+	> .container {
+		padding-bottom: 1rem;
+		padding-top: 1rem;
+	}
+}
+
+hr {
+	max-width: 50px;
+	border-width: 3px;
+	border-color: $primary;
+}
+
+//Dirty Minium fixes
+
+//this one does the products available string in the catalogue search results
+
+.columns-2 {
+	margin-top: 10px;
+}
+
+#portlet_com_liferay_commerce_product_content_search_web_internal_portlet_CPSortPortlet > div > div > div > div > div > p {
+	font-style: italic;
+	font-size: 0.9em;
+}
+
+.account-management__email {
+	display: none;
+}
+
+.account-management__name {
+	margin-top: 7%;
+}
+
+.ddm-form-description {
+	margin-bottom: 10px;
+}
+
+//FAQ Styles
+
+.drop-question {
+	padding: 10px;
+	border: $primary 1px solid;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.drop-answer {
+	padding: 10px;
+}
